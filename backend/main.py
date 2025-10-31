@@ -17,6 +17,9 @@ app.include_router(cars_router)
 @app.on_event("startup")
 def startup_event():
     create_tables()
+    # Seed database with sample data
+    from seed_data import seed_database
+    seed_database()
 
 @app.get("/")
 def root():
