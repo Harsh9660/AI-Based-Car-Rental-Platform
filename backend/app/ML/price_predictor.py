@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
 class PricePredictor:
-    def __init__(self, model_path="data/models/price_model.pkl"):
+    def __init__(self, model_path="data/raw/bookings_price_model.pkl"):
         self.model_path = model_path
         self.model = None
         self.load_model()

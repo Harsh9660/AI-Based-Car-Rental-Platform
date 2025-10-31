@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import create_tables
 from app.routes.cars import router as cars_router
+from app.routes.admin import router as admin_router
 
 app = FastAPI(title="AI Car Rental Platform", version="1.0.0")
 
@@ -13,6 +14,7 @@ app.add_middleware(
 )
 
 app.include_router(cars_router)
+app.include_router(admin_router)
 
 @app.on_event("startup")
 def startup_event():
