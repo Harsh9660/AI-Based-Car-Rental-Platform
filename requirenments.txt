@@ -1,0 +1,8 @@
+kagglehub
+Pandas
+numpy
+SQLAlchemy
+fastapi
+uvicorn
+pydantic
+databases
